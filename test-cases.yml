@@ -39,7 +39,7 @@
     no data
   steps:
     - Открыть в браузере страницу https://hexlet-products-store.vercel.app/
-    - В выпадающем списке Category выбрать mens-shoes
+    - В выпадающем списке Category выбрать одну из доступных категорий, например mens-shoes
   expected-result: |
     На странице отображаются товары относящиеся к выбранной категории
 
