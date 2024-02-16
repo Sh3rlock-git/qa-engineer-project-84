@@ -18,11 +18,11 @@
     Не работает фильтр товаров по цене в диапазоне от 5595 до 11190
   environment: |
     Chrome 121.0.6167.161 (Официальная сборка), (64 бит)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. В поле From ввести значение 5595
-	3. В поле To ввести значение 11190
+    2. В поле From ввести значение 5595
+    3. В поле To ввести значение 11190
   expected-result: |
     В результатах выдачи на странице отображаются товары с ценовым диапазоном от 5595 до 11190 включительно
   actual-result: |
@@ -32,11 +32,11 @@
     Не работает фильтр товаров по цене в диапазоне от 11190 до 11191
   environment: |
     Chrome 121.0.6167.161 (Официальная сборка), (64 бит)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. В поле From ввести значение 11190
-	3. В поле To ввести значение 11191
+    2. В поле From ввести значение 11190
+    3. В поле To ввести значение 11191
   expected-result: |
     В результатах выдачи на странице отображаются товары с ценовым диапазоном от 11190 до 11190
   actual-result: |
@@ -46,11 +46,11 @@
     На странице отображаются товары при фильтрации цены по спец.символам и буквам
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Winodows 10 Pro 22H2
+    OC Winodows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. В поле From ввести значение <1>*
-	3. В поле To ввести значение Rs
+    2. В поле From ввести значение <1>*
+    3. В поле To ввести значение Rs
   expected-result: |
     Отображается страница с сообщением "Nothing found!"
   actual-result: |
@@ -59,14 +59,14 @@
 - summary: |
     Отсутствуют добавленные товары в корзину при открытии корзины в новой вкладке
   environment: |
-	Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    Firefox v 122.0.1 (64-разрядный)
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. Добавить в корзину любой товар, кликнув на кнопку Add to cart
-	3. Кликнуть ПКМ на Cart
-	4. Выбрать из контекстного меню "открыть ссылку в новой вкладке"
-	5. Перейти на открывшуюся вкладку с корзиной
+    2. Добавить в корзину любой товар, кликнув на кнопку Add to cart
+    3. Кликнуть ПКМ на Cart
+    4. Выбрать из контекстного меню "открыть ссылку в новой вкладке"
+    5. Перейти на открывшуюся вкладку с корзиной
   expected-result: |
     В корзине отображается добавленыый товар. Счетчик на корзине отобржает количесто добавленных товаров
   actual-result: |
@@ -76,11 +76,11 @@
     Не работает скрол страницы с товарами вверх, после нажатия на кнопку next
   environment: |
     Safari v 16.5
-	OC mac ventura
+    OC mac ventura
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. Проскролить страницу вниз до кнопок Previous, Next
-	3. Нажать на кнопку Next
+    2. Проскролить страницу вниз до кнопок Previous, Next
+    3. Нажать на кнопку Next
   expected-result: |
     Открылась следующая страница с товарами. Положение скрола в скролбаре - вверху страницы
   actual-result: |
@@ -90,11 +90,11 @@
     Активная кнопка Next на последней странице товара
   environment: |
     Yandex Browser 24.1.0.2570 (64-bit)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. Выбрать бренд из списка, например Dry Rose
-	3. Нажать на кнопку next
+    2. Выбрать бренд из списка, например Dry Rose
+    3. Нажать на кнопку next
   expected-result: |
     На последней странице товара кнопка Next должна быть неактивной
   actual-result: |
@@ -104,11 +104,11 @@
     Активная кнопка Previous на главной  странице сайта
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. Выбрать в выпадающем списке Category категорию smartphones
-	3. Проскролить страницу выдачи товаров вниз
+    2. Выбрать в выпадающем списке Category категорию smartphones
+    3. Проскролить страницу выдачи товаров вниз
   expected-result: |
     Кнопка Previous не отображается на странице
   actual-result: |
@@ -118,10 +118,10 @@
     Отсутствует валидация формы From в side баре слева для отрицательных чисел
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. В поле From ввести число -1
+    2. В поле From ввести число -1
   expected-result: |
     Отображается сообщение о недопустимом значении. Указан валидный диапазон чисел
   actual-result: |
@@ -131,10 +131,10 @@
     Отсутствует валидация формы From в side баре слева для спец.символов
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. В поле From ввести <!>*
+    2. В поле From ввести <!>*
   expected-result: |
     Отображается сообщение о недопустимом значении. Указано значение валидных данных
   actual-result: |
@@ -144,10 +144,10 @@
     Отсутствует валидация формы From в side баре слева для букв
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
-	2. В поле From ввести vF
+    2. В поле From ввести vF
   expected-result: |
     Отображается сообщение о недопустимом значении. Указано значение валидных данных
   actual-result: |
@@ -157,7 +157,7 @@
     Отсутствует валидация поля To для отрицательных чисел в side баре слева
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. В поле To нажать на стрелку вниз
@@ -170,7 +170,7 @@
     Отсутствует валидация поля To для спец.символов в side баре слева
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. В поле To ввести +)"
@@ -183,7 +183,7 @@
     Отсутствует валидация поля To для букв в side баре слева
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. В поле To ввести лмН
@@ -196,7 +196,7 @@
     Отсутствует icon английского языка локализации в списке Language
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. Развернуть список Language
@@ -209,11 +209,11 @@
     Не переведены на русский язык названия категорий в локализации RU
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. В списке Language выбрать язык Russian
-	3. Развернуть список Категория
+    3. Развернуть список Категория
   expected-result: |
     Названия категорий отображаются на русском языке
   actual-result: |
@@ -223,7 +223,7 @@
     Описание карточки товара на английском языке в локализации RU
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. В списке Language выбрать язык Russian
@@ -236,11 +236,11 @@
     Подробная информация о товаре на английском языке в локализации RU
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. В списке Language выбрать язык Russian
-	3. Кликнуть на карточку любого товара, например Iphone X
+    3. Кликнуть на карточку любого товара, например Iphone X
   expected-result: |
     На странице с товаром описание подробной информации о товаре на русском языке
   actual-result: |
@@ -250,11 +250,11 @@
     Цена продукта отображается в долларах в локализации RU
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. В списке Language выбрать язык Russian
-	  3. Кликнуть на карточку любого товара, например MacBook Pro
+    3. Кликнуть на карточку любого товара, например MacBook Pro
   expected-result: |
     На странице с товаром цена указана в рублях
   actual-result: |
@@ -264,7 +264,7 @@
     Цена товаров на главной странице сайта отобржается в долларах, в локализации RU
   environment: |
     Firefox v 122.0.1 (64-разрядный)
-	OC Windows 10 Pro 22H2
+    OC Windows 10 Pro 22H2
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. В списке Language выбрать язык Russian
@@ -277,7 +277,7 @@
     Поле Search выходит за пределы side бара в мобильной версии и альбомной ориентации экрана
   environment: |
     Safari 14
-	OC IOS 14.6 Iphone 11 Pro
+    OC IOS 14.6 Iphone 11 Pro
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/
     2. Перевести экран в альбомную ориентацию
@@ -291,7 +291,7 @@
     Кнопки Previous и Next наслаиваются на поле Search в мобильной версии, книжной ориентации экрана
   environment: |
     Safari 14
-	OC IOS 14.6 Iphone 11 Pro
+    OC IOS 14.6 Iphone 11 Pro
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/ в книжной ориентации экрана
   expected-result: |
@@ -303,7 +303,7 @@
     Список брендов смещен вправо и выходит за пределы side бара
   environment: |
     Chrome 87.0.4280.141
-	OC Android 11 Galaxy S20 Ultra
+    OC Android 11 Galaxy S20 Ultra
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/ в книжной ориентации экрана
   expected-result: |
@@ -315,10 +315,10 @@
     Отсутствуют поля для фильтрации по цене в формах From и To
   environment: |
     Chrome 87.0.4280.141
-	OC Android 11 Galaxy S20 Ultra
+    OC Android 11 Galaxy S20 Ultra
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/ в книжной ориентации экрана
-	2. Проскролить страницу до формы From и To
+    2. Проскролить страницу до формы From и To
   expected-result: |
     Есть поля для ввода цены с физической или виртуальной клавиатуры
   actual-result: |
@@ -328,10 +328,10 @@
     Кнопки Delete в корзине смещены относительно друг друга
   environment: |
     Chrome 87.0.4280.141
-	OC Android 11 Galaxy S20 Ultra
+    OC Android 11 Galaxy S20 Ultra
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/ в книжной ориентации экрана
-	2. Кликнуть на Cart
+    2. Кликнуть на Cart
   expected-result: |
     Кнопки Delete находятся на одном уровне
   actual-result: |
@@ -341,10 +341,10 @@
     Сумма в корзине отобржается в долларах в локализации RU
   environment: |
     Chrome 87.0.4280.141
-	OC Android 11 Galaxy S20 Ultra
+    OC Android 11 Galaxy S20 Ultra
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/ в книжной ориентации экрана
-	2. Кликнуть на Cart
+    2. Кликнуть на Cart
   expected-result: |
     Кнопки Delete находятся на одном уровне
   actual-result: |
@@ -354,10 +354,10 @@
     Страница с товарами уходит вниз за пределы Viewport в локализации RU
   environment: |
     Chrome 87.0.4280.141
-	OC Android 11 Galaxy S20 Ultra
+    OC Android 11 Galaxy S20 Ultra
   steps-to-reproduce: |
     1. Открыть страницу https://hexlet-products-store.vercel.app/ в книжной ориентации экрана
-	2. Выбрать язык Russian из списка Language
+    2. Выбрать язык Russian из списка Language
   expected-result: |
     На странице отобржаются карточки товаров
   actual-result: |
