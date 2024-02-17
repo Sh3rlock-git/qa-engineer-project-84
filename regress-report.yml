@@ -1,1 +1,230 @@
+---
+test-cases:
+  - summary: |
+      Поиск товара по ключевому слову в локализации RU
+    status: fail
+    
+  - summary: |
+      Поиск товара по ключевому слову в локализации EN
+    status: pass
+    
+  - summary: |
+      Поиск товара по категории в локализации EN
+    status: pass
+    
+  - summary: |
+      Поиск товаров по категории в локализации RU
+    status: pass
+    
+  - summary: |
+      Фильтрация товаров по производителю в локализации EN
+    status: pass
+    
+  - summary: |
+      Фильтрация товаров по производителю в локализации RU
+    status: pass
+    
+  - summary: |
+      Фильтрация товаров по фильтру "в наличии"
+    status: fail
+    
+  - summary: |
+      Фильтрация товаров по категории и бренду
+    status: pass
+    
+  - summary: |
+      Фильтрация товаров по цене от 0 до 11190
+    status: pass
+    
+  - summary: |
+      Фильтрация товаров по цене от 5595 до 11190
+    status: pass
+    
+  - summary: |
+      Фильтрация товаров по цене от 11190 до 11191
+    status: pass
+    
+  - summary: |
+      Фильтрация товаров по цене от -1 до 0
+    status: fail
+    
+  - summary: |
+      Фильтрация товаров по цене от 11191 до 11191
+    status: fail
+    
+  - summary: |
+      Фильтрация товаров по цене в диапазоне от спец.симолов до букв
+    status: fail
+    
+  - summary: |
+      Просмотр карточки товара
+    status: pass
+    
+  - summary: |
+      Переход к следующему экрану с выдачей товаров по нажатию на кнопку next
+    status: pass
+    
+  - summary: |
+      Переход к предыдущему экрану с выдачей товаров по нажатию на кнопку
+      Previous
+    status: pass
+    
+  - summary: |
+      Добавление товара в корзину с главной страницы сайта
+    status: pass
+    
+  - summary: |
+      Добавление товара в корзину на странице подробного описания товара
+    status: pass
+    
+  - summary: |
+      Просмотр содержимого корзины в текущей вкладке браузера
+    status: pass
+    
+  - summary: |
+      Просмотр содержимого корзины в новой вкладке браузера
+    status: fail
+    
+  - summary: |
+      Удаление товара из корзины по клику на кнопку Delete
+    status: pass
+    
+  - summary: |
+      Удаление товаров из корзины по клику на кнопку Clear cart
+    status: pass
+    
+  - summary: |
+      Переход из корзины на главную страницу сайта по клику на кнопку
+      Continue shopping
+    status: pass
+    
+  - summary: |
+      Переход из корзины на главную страницу сайта по клику на Store
+    status: pass
 
+---
+bugreports:
+  - summary: |
+      На главной странице отобржаются товары при неактивном чекбоксе In Stock
+      в локализации EN
+    environment: |
+      Firefox v 122.0.1 (64-разрядный)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: >
+      1. Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Деактивировать чекбокс In Stock
+    expected-result: |
+      На странице не отобржаются товары
+    actual-result: |
+      Отображаются товары
+      
+  - summary: |
+      На главной странице отобржаются товары при неактивном чекбоксе "в
+      наличии" в локализации RU
+    environment: |
+      Firefox v 122.0.1 (64-разрядный)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: >
+      1. Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. В списке Language выбрать язык Russian
+      3. Деактивировать чекбокс In Stock
+    expected-result: |
+      На странице не отобржаются товары
+    actual-result: |
+      Отображаются товары
+      
+  - summary: |
+      Товары фильтрируются по цене от -1 до 0
+    environment: |
+      Firefox v 122.0.1 (64-разрядный)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: >
+      1. Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. В поле From ввести значение -1
+      3. В поле To ввести значение 0
+    expected-result: |
+      На странице не отобржаются товары
+    actual-result: |
+      Отображаются товары
+      
+  - summary: |
+      Товары фильтрируются по цене превышающую максимально допустимую, от
+      11191 до 11191
+    environment: |
+      Firefox v 122.0.1 (64-разрядный)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: |
+      1. Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. В поле From ввести значение 11191
+      3. В поле To ввести значение 11191
+    expected-result: |
+      На странице не отобржаются товары
+    actual-result: |
+      Отображаются товары
+      
+  - summary: |
+      Товары фильтрируются по спец.символам и буквам
+    environment: |
+      Firefox v 122.0.1 (64-разрядный)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: >
+      1. Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. В поле From ввести значение <!>*
+      3. В поле To ввести значение Rs
+    expected-result: |
+      На странице не отобржаются товары
+    actual-result: |
+      Отображаются товары
+      
+  - summary: |
+      Не отображается добавленный товар в корзине, при открытии корзины в
+      новой вкладке
+    environment: |
+      Firefox v 122.0.1 (64-разрядный)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: |
+      1. Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Добавить любой товар в корзину
+      3. Кликнуть ПКМ на Cart, выбрать пункт "открыть ссылку в новой вкладке"
+    expected-result: >
+      В корзине отобржается добавленный товар. Счетчик корзины
+      показывает количесто товаров
+    actual-result: |
+      Корзина пустая. Счетчик товаров у корзины не отображается
+      
+  - summary: |
+      Пустая строка в выпадающем списке Категория, в локализации EN
+    environment: |
+      Firefox v 122.0.1 (64-разрядный)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: >
+      1. Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Развернуть выпадающий список Category
+    expected-result: |
+      В списке отсутствуют лишние отступы и незаполненные строки
+    actual-result: >
+      На первом месте в списке отображается пустое поле. Ошибка
+      изображена на скриншоте store_v2_category_toggle_empty-field.jpg
+      
+  - summary: |
+      Изменяется размер карточки товара OPPO при выборе товара по
+      производителю OPPO
+    environment: |
+      Firefox v 122.0.1 (64-разрядный)
+      ОС Windows 10 Pro 22H2
+    steps-to-reproduce: |
+      1. Открыть страницу
+      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Активировать чекбокс OPPO в списке "производитель"
+    expected-result: |
+      Отображается полномерная карточка товара
+    actual-result: >
+      Половина изображения товара обрезано. Ошибка изображена на
+      скриншоте store_v2_brand_oppo.png
