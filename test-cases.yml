@@ -68,7 +68,7 @@
     no data
     
   steps:
-    - Перейти по ссылке: https://hexlet-products-store.vercel.app/	
+    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - Выбрать бренд из списка Brand, например Infinix
   expected-result: |
     На странице отображаются товары относящиеся к выбранному бренду
@@ -98,7 +98,7 @@
     no data
     
   steps:
-    - Перейти по ссылке: https://hexlet-products-store.vercel.app/
+    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - Деактивировать чек бокс In Stock
   expected-result: |
     На странице с товарами отображается сообщение "Nothing found!"
@@ -220,7 +220,7 @@
     no data
     
   steps:
-    - Перейти по ссылке: https://hexlet-products-store.vercel.app/
+    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - На странице с товарами ликнуть ЛКМ по карточке любого продукта
   expected-result: |
     В текущей вкладке браузера открыта страница с товаром и его подробным описанием
@@ -235,7 +235,7 @@
     no data
     
   steps:
-    - Перейти по ссылке: https://hexlet-products-store.vercel.app/
+    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - Кликнуть на кнопку Next
   expected-result: |
     Открылся следующий экран с товарами
@@ -266,7 +266,7 @@
     no data
     
   steps:
-    - Перейти по ссылке: https://hexlet-products-store.vercel.app/
+    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - Кликнуть на кнопку Add to cart на карточке любого товара, например iPhone9
     - Кликнуть на Cart
   expected-result: |
