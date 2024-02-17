@@ -102,7 +102,7 @@ test-cases:
       Переход из корзины на главную страницу сайта по клику на Store
     status: pass
 
-#bugreports:
+bugreports:
   - summary: |
       На главной странице отобржаются товары при неактивном чекбоксе In Stock
       в локализации EN
@@ -208,7 +208,7 @@ test-cases:
       2. Развернуть выпадающий список Category
     expected-result: |
       В списке отсутствуют лишние отступы и незаполненные строки
-    actual-result: >
+    actual-result: |
       На первом месте в списке отображается пустое поле. Ошибка
       изображена на скриншоте store_v2_category_toggle_empty-field.jpg
       
@@ -224,6 +224,6 @@ test-cases:
       2. Активировать чекбокс OPPO в списке "производитель"
     expected-result: |
       Отображается полномерная карточка товара
-    actual-result: >
+    actual-result: |
       Половина изображения товара обрезано. Ошибка изображена на
       скриншоте store_v2_brand_oppo.png
