@@ -117,22 +117,7 @@ bugreports:
       На странице не отобржаются товары
     actual-result: |
       Отображаются товары
-      
-  - summary: |
-      На главной странице отобржаются товары при неактивном чекбоксе "в
-      наличии" в локализации RU
-    environment: |
-      Firefox v 122.0.1 (64-разрядный)
-      ОС Windows 10 Pro 22H2
-    steps-to-reproduce: >
-      1. Открыть страницу
-      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. В списке Language выбрать язык Russian
-      3. Деактивировать чекбокс In Stock
-    expected-result: |
-      На странице не отобржаются товары
-    actual-result: |
-      Отображаются товары
+    
       
   - summary: |
       Товары фильтрируются по цене от -1 до 0
@@ -196,21 +181,6 @@ bugreports:
       показывает количесто товаров
     actual-result: |
       Корзина пустая. Счетчик товаров у корзины не отображается
-      
-  - summary: |
-      Пустая строка в выпадающем списке Категория, в локализации EN
-    environment: |
-      Firefox v 122.0.1 (64-разрядный)
-      ОС Windows 10 Pro 22H2
-    steps-to-reproduce: >
-      1. Открыть страницу
-      https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Развернуть выпадающий список Category
-    expected-result: |
-      В списке отсутствуют лишние отступы и незаполненные строки
-    actual-result: |
-      На первом месте в списке отображается пустое поле. Ошибка
-      изображена на скриншоте store_v2_category_toggle_empty-field.jpg
       
   - summary: |
       Изменяется размер карточки товара OPPO при выборе товара по
