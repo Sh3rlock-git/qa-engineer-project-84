@@ -24,7 +24,6 @@
   test-data: |
     no data
   steps:
-    - Открыть в браузере страницу https://hexlet-products-store.vercel.app/
     - В поле поиска ввести ключевое слово латиницей, например "perfume"
   expected-result: |
     На странице отображаются товары содержащие в описании ключевое слово.
@@ -38,7 +37,6 @@
   test-data: |
     no data
   steps:
-    - Открыть в браузере страницу https://hexlet-products-store.vercel.app/
     - В выпадающем списке Category выбрать одну из доступных категорий, например mens-shoes
   expected-result: |
     На странице отображаются товары относящиеся к выбранной категории
@@ -48,10 +46,9 @@
   requirement: |
     В результатах выдачи отображаются товары соответсвующие выбранной категории
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
     no data
-    
   steps:
     - Из выпадающего списка Language выбрать язык Russian
     - В выпадающем списке Категория выбрать одну из доступных категорий, например furniture
@@ -65,10 +62,8 @@
   prerequisites: |
     none
   test-data: |
-    no data
-    
+    no data 
   steps:
-    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - Выбрать бренд из списка Brand, например Infinix
   expected-result: |
     На странице отображаются товары относящиеся к выбранному бренду
@@ -78,10 +73,9 @@
   requirement: |
     На странице отображаются товары выбранного бренда
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
     no data
-    
   steps:
     - Из выпадающего списка Language выбрать язык Russian
     - Выбрать бренд из списка "Производитель", например Golden
@@ -96,7 +90,6 @@
     none
   test-data: |
     no data
-    
   steps:
     - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - Деактивировать чек бокс In Stock
@@ -111,7 +104,6 @@
     Открыта главная страница сайта
   test-data: |
     no data
-    
   steps:
     - Выбрать одну из доступных категорий в списке Category, например smartphones
     - Выбрать бренд относящийся к категории, например Huawei
@@ -124,10 +116,9 @@
   requirement: |
     На странице отображаются товары с ценой из указанного интервала.
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
     From = 0 To = 11190
-    
   steps:
     - В поле From ввести значение 0
     - В поле To ввести значение 11190
@@ -139,10 +130,9 @@
   requirement: |
     На странице отображаются товары с ценой из указанного интервала.
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
     From = 5595 To = 11190
-    
   steps:
     - В поле From ввести значение 5595
     - В поле To ввести значение 11190
@@ -154,10 +144,9 @@
   requirement: |
     На странице отображаются товары с ценой из указанного интервала
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
     From = 11190 To = 11191
-    
   steps:
     - В поле From ввести значение 11190
     - В поле To ввести значение 11191
@@ -169,10 +158,9 @@
   requirement: |
     На странице не отображаются товары заданного ценового диапзона
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
     From = -1 To = 0
-    
   steps:
     - В поле From ввести значение -1
     - В поле To ввести значение 0
@@ -184,10 +172,9 @@
   requirement: |
     На странице не отображаются товары заданного ценового диапзона
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
      From = 11191 To = 11191
-    
   steps:
     - В поле From ввести значение 11191
     - В поле To ввести значение 11191
@@ -199,10 +186,9 @@
   requirement: |
     На странице не отображаются товары заданного диапзона
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
     From = <!>* To = Rs
-    
   steps:
     - В поле From ввести значение <!>*
     - В поле To ввести значение Rs
@@ -218,42 +204,37 @@
     none
   test-data: |
     no data
-    
   steps:
-    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - На странице с товарами ликнуть ЛКМ по карточке любого продукта
   expected-result: |
     В текущей вкладке браузера открыта страница с товаром и его подробным описанием
 
 - summary: |
-    Переход к следующему экрану с выдачей товаров по нажатию на кнопку next
+    Пагинация в каталоге товаров кнопкой next
   requirement: |
-    По нажатию на кнопку next открывается следующая страница с товарами
+    По нажатию на кнопку next загружается следующая страница с товарами
   prerequisites: |
     none
   test-data: |
     no data
-    
   steps:
-    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - Кликнуть на кнопку Next
   expected-result: |
-    Открылся следующий экран с товарами
+    Загрузилась следующая страница с товарами
 
 - summary: |
-    Переход к предыдущему экрану с выдачей товаров по нажатию на кнопку Previous
+    Пагинация в каталоге товаров кнопкой Previous
   requirement: |
-    По нажатию на кнопку Previous открывается предыдущая страница с товарами
+    По нажатию на кнопку Previous загружается предыдущая страница с товарами
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/
+    none
   test-data: |
     no data
-    
   steps:
     - Нажать на кнопку Next
     - Нажать на кнопку Previous
   expected-result: |
-    На сайте отображается предыдущий экран с товарами
+    На сайте отображается предыдущая страница с товарами
 
 #Добавление в корзину
 - summary: |
@@ -264,9 +245,7 @@
     none
   test-data: |
     no data
-    
   steps:
-    - Перейти по ссылке "https://hexlet-products-store.vercel.app/"
     - Кликнуть на кнопку Add to cart на карточке любого товара, например iPhone9
     - Кликнуть на Cart
   expected-result: |
@@ -277,11 +256,9 @@
   requirement: |
     Клик по кнопке Add to cart добавляет товар в корзину
   prerequisites: |
-    В браузере открыта страница https://hexlet-products-store.vercel.app/ Выбрана категория
-    home-decoration
+     Выбрана категория home-decoration
   test-data: |
     no data
-    
   steps:
     - Кликнуть по карточке любого товара из выдачи на странице, например на Key Holder
     - Кликнуть на кнопку Add to cart, на открывшейся странице товара
@@ -291,20 +268,6 @@
 
 #Корзина
 - summary: |
-    Просмотр содержимого корзины в текущей вкладке браузера
-  requirement: |
-    В корзине отображается добавленный товар
-  prerequisites: |
-    В корзину добавлен товар
-  test-data: |
-    no data
-    
-  steps:
-    - Кликнуть на Cart
-  expected-result: |
-    В корзине отображается добавленный товар
-
-- summary: |
     Просмотр содержимого корзины в новой вкладке браузера
   requirement: |
     В корзине отображается добавленный товар
@@ -312,7 +275,6 @@
     Добавлен товар в корзину
   test-data: |
     no data
-    
   steps:
     - Кликнуть ПКМ на Cart
     - Выбрать из контекстного меню "открыть ссылку в новой вкладке"
@@ -328,7 +290,6 @@
     В корзину добавлен товар. Открыта страница с корзиной
   test-data: |
     no data
-    
   steps:
     - Нажать на кнопку Delete
   expected-result: |
@@ -342,7 +303,6 @@
     Товары уже добавлены. Открыта страница с корзиной
   test-data: |
     no data
-    
   steps:
     - Кликнуть на кнопку Clear cart
   expected-result: |
@@ -356,7 +316,6 @@
     none
   test-data: |
     no data
-    
   steps:
     - Кликнуть на Cart
     - Кликнуть на кнопку Continue shopping
@@ -371,7 +330,6 @@
     Открыта страница с корзиной
   test-data: |
     no data
-    
   steps:
     - Кликнуть на Store
   expected-result: |
