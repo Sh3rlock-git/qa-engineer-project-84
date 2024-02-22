@@ -21,7 +21,7 @@
   environment: |
     Firefox v 122.0.1 (64-разрядный)
     ОС Windows 10 Pro 22H2
-  steps-to-reprodice: |
+  steps-to-reproduce: |
     1. Открыть в браузере страницу https://hexlet-products-store.vercel.app/
     2. Из каталога товара добавить в корзину любой товар
     3. Кликнуть на Cart
