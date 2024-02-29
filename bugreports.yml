@@ -32,6 +32,23 @@
     отобржает количесто добавленных товаров
   actual-result: |
     Корзина пустая. Счетчик корзины не отображается.
+
+- summary: |
+    Ошибка 500 при GET запросе на хост "https://dummyjson.com/http/500/failed"
+ environment: |
+    Firefox v 122.0.1 (64-разрядный)
+    OC Windows 10 Pro 22H2
+ steps-to-reproduce: |
+    1. Открыть страницу https://hexlet-products-store.vercel.app/
+    2. Открыть вкладку Console в DevTools
+    3. Добавить в корзину любой товар, кликнув на кнопку Add to cart
+    4. Кликнуть на Cart
+    5. Кликнуть на кнопку Checkout
+ expected-result: |
+    На вкладке Console в DevTools нет ошибок. На вкладке Network status code ответа от сервера - 200 OK
+ actual-result: |
+    На вкладке Console GET запрос к "https://dummyjson.com/" имеет статус 500
+    Ошибка отображена на скриншоте store_v1_checkout_error_500.png
     
 - summary: |
     Не работает автоматический скрол страницы с товарами вверх, после нажатия на кнопку next
